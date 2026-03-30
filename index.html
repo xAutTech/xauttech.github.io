@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xAutTech — Engineering Automation, Reinvented</title>
+    <meta name="description" content="xAutTech builds automation solutions that eliminate manual, repetitive engineering workflows in the manufacturing industry.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0f172a',
+                        'navy-light': '#1e293b',
+                        accent: '#3b82f6',
+                        'accent-dark': '#2563eb',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.3); }
+        .fade-in { animation: fadeIn 0.8s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-navy text-gray-200">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-navy/90 backdrop-blur-md z-50 border-b border-white/5">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">
+                <span class="text-white">x</span><span class="gradient-text">Aut</span><span class="text-white">Tech</span>
+            </a>
+            <div class="hidden md:flex gap-8 text-sm text-gray-400">
+                <a href="#problem" class="hover:text-white transition">Problem</a>
+                <a href="#solutions" class="hover:text-white transition">Solutions</a>
+                <a href="#why-us" class="hover:text-white transition">Why Us</a>
+                <a href="#about" class="hover:text-white transition">About</a>
+                <a href="#contact" class="hover:text-white transition">Contact</a>
+            </div>
+            <button id="menu-btn" class="md:hidden text-gray-400 hover:text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-3 text-sm text-gray-400">
+            <a href="#problem" class="block hover:text-white">Problem</a>
+            <a href="#solutions" class="block hover:text-white">Solutions</a>
+            <a href="#why-us" class="block hover:text-white">Why Us</a>
+            <a href="#about" class="block hover:text-white">About</a>
+            <a href="#contact" class="block hover:text-white">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center px-6 pt-20">
+        <div class="max-w-4xl text-center fade-in">
+            <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
+                Engineering Automation,<br>
+                <span class="gradient-text">Reinvented</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                We eliminate manual, repetitive engineering workflows in manufacturing
+                — so your team can focus on what matters: design and innovation.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact" class="bg-accent hover:bg-accent-dark text-white font-semibold px-8 py-3.5 rounded-lg transition">
+                    Get in Touch
+                </a>
+                <a href="#problem" class="border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white font-semibold px-8 py-3.5 rounded-lg transition">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                    Engineers Deserve Better Than Data Entry
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+                    In manufacturing, the gap between design tools and enterprise systems
+                    is filled with hours of manual, error-prone work.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-navy-light rounded-xl p-8 border border-white/5 card-hover">
+                    <div class="text-4xl mb-4">
+                        <svg class="w-10 h-10 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Time Wasted</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Engineers spend hours manually transferring data between design tools and
+                        management systems — per part, across hundreds of parts.
+                    </p>
+                </div>
+                <div class="bg-navy-light rounded-xl p-8 border border-white/5 card-hover">
+                    <div class="text-4xl mb-4">
+                        <svg class="w-10 h-10 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Error Prone</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Manual data entry leads to typos, missed fields, and inconsistent records
+                        — cascading into costly review cycles and rework.
+                    </p>
+                </div>
+                <div class="bg-navy-light rounded-xl p-8 border border-white/5 card-hover">
+                    <div class="text-4xl mb-4">
+                        <svg class="w-10 h-10 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">High Cost</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        At $100-200+/hr in engineering time, manual workflows across thousands
+                        of parts add up to enormous, avoidable costs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="py-24 px-6 bg-navy-light/50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                    We Automate What Slows You Down
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+                    Our solutions integrate directly with your existing tools — no rip-and-replace,
+                    just smarter workflows.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-navy rounded-xl p-8 border border-white/5 card-hover">
+                    <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Workflow Automation</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Automate the data flow between your design and enterprise systems.
+                        Part attributes, material data, and specifications — transferred
+                        accurately in seconds, not hours.
+                    </p>
+                </div>
+                <div class="bg-navy rounded-xl p-8 border border-white/5 card-hover">
+                    <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Calculation Automation</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Formula-driven engineering calculations — insulation, thermal,
+                        structural — automated and validated. Eliminate repetitive
+                        computation from your engineers' workload.
+                    </p>
+                </div>
+                <div class="bg-navy rounded-xl p-8 border border-white/5 card-hover">
+                    <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Data Validation</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Catch errors at the source with intelligent validation.
+                        Ensure compliance, traceability, and data consistency
+                        before it enters your systems.
+                    </p>
+                </div>
+                <div class="bg-navy rounded-xl p-8 border border-white/5 card-hover">
+                    <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Review Acceleration</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Streamline approval workflows with accurate, pre-validated data.
+                        Reduce review cycles from days to hours by eliminating
+                        data-quality bottlenecks.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                    Why <span class="gradient-text">xAutTech</span>
+                </h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-x-16 gap-y-10 max-w-4xl mx-auto">
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center mt-1">
+                        <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Built by Engineers, for Engineers</h3>
+                        <p class="text-gray-400">Founded by manufacturing and software engineers who understand your workflows from the inside.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center mt-1">
+                        <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Works With Your Existing Tools</h3>
+                        <p class="text-gray-400">We integrate with the design and management tools you already use. No migration required.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center mt-1">
+                        <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Automation First, AI Where It Matters</h3>
+                        <p class="text-gray-400">We use reliable API-driven automation as the foundation, enhanced with AI only where it adds genuine value.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center mt-1">
+                        <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Measurable ROI from Day One</h3>
+                        <p class="text-gray-400">Hours saved, errors eliminated, costs reduced — our impact is quantifiable from your very first automated workflow.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 px-6 bg-navy-light/50 border-y border-white/5">
+        <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">80%</div>
+                <div class="text-sm text-gray-400">Reduction in Manual<br>Data Entry Time</div>
+            </div>
+            <div>
+                <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">95%</div>
+                <div class="text-sm text-gray-400">Data Accuracy<br>Improvement</div>
+            </div>
+            <div>
+                <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">10x</div>
+                <div class="text-sm text-gray-400">Faster Workflow<br>Completion</div>
+            </div>
+            <div>
+                <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">50%</div>
+                <div class="text-sm text-gray-400">Reduction in<br>Review Cycles</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Our Team</h2>
+                <p class="text-gray-400 text-lg">
+                    Manufacturing expertise meets software engineering.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-navy-light rounded-xl p-8 border border-white/5 text-center">
+                    <div class="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-5">
+                        <span class="text-2xl font-bold text-accent">HG</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-1">Hoysala Gowda</h3>
+                    <p class="text-accent text-sm mb-4">CEO &amp; Co-founder</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Mechanical engineer with deep expertise in manufacturing workflows,
+                        design tools, and lifecycle management systems.
+                        Drives product vision and customer relationships.
+                    </p>
+                </div>
+                <div class="bg-navy-light rounded-xl p-8 border border-white/5 text-center">
+                    <div class="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-5">
+                        <span class="text-2xl font-bold text-accent">DP</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-1">Deepak Paramashivam</h3>
+                    <p class="text-accent text-sm mb-4">CTO &amp; Co-founder</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Software engineer with expertise in systems architecture
+                        and embedded software. Leads platform development
+                        and technical strategy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 bg-navy-light/50">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Automate Your Engineering Workflows?
+            </h2>
+            <p class="text-gray-400 text-lg mb-10">
+                Tell us about the manual processes slowing your team down.
+                We'll show you what's possible.
+            </p>
+            <a href="mailto:contact@xauttech.com" class="inline-block bg-accent hover:bg-accent-dark text-white font-semibold px-10 py-4 rounded-lg transition text-lg">
+                contact@xauttech.com
+            </a>
+            <p class="text-gray-500 text-sm mt-6">
+                We typically respond within 24 hours.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 border-t border-white/5">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-sm text-gray-500">
+                &copy; 2026 xAutTech. All rights reserved.
+            </div>
+            <div class="flex gap-6 text-sm text-gray-500">
+                <a href="mailto:contact@xauttech.com" class="hover:text-gray-300 transition">Email</a>
+                <span class="text-gray-700">|</span>
+                <a href="#" class="hover:text-gray-300 transition">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile menu toggle -->
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
